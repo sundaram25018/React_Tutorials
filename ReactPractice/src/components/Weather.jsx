@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function WeatherApp() {
-  const API_KEY = "065e17631b69406a8e49dff91028a3b6"
+  const API_KEY = import.meta.env.VITE_API_KEY;
   const [city, setCity] = useState("");
   const [weather, setWeather] = useState(null);
   const fetchWeather = async () => {
